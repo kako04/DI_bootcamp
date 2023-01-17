@@ -1,0 +1,13 @@
+section{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 5px;
+    height: 700px;
+    width: 700px;
+}
+div{
+    background-color: orange;
+    width: 90%;
+    height: 90%;
+}

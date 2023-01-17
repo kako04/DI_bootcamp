@@ -1,0 +1,26 @@
+/* *{} */
+
+section{
+    height: 500px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div{
+    /* border: 2px solid red; */
+    background-color: aqua;
+    height: 15%;
+}
+#b{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 45%;
+}
+.a{
+    background-color: aqua;
+    width: 60%;
+    height: 100%;
+}

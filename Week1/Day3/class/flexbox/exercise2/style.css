@@ -1,0 +1,29 @@
+/* *{} */
+html{height: 100%;}
+body{
+    height: 100%;
+}
+section{
+    height: 100%;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div{
+    /* border: 2px solid red; */
+    background-color: aqua;
+    height: 32%;
+}
+#b{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 32%;
+}
+.a{
+    background-color: aqua;
+    width: 25%;
+    height: 100%;
+}

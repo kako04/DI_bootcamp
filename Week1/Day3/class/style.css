@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.flexcontainer{
+    border: solid black 1px;
+    background-color: darkblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    /* flex-wrap: wrap; */
+}
+.flexchild{
+    /* background-color: gray; */
+    border: red 1px solid;
+    /* height: 200px; */
+    width: 40%;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+li{
+    border: 1px solid red;
+}
