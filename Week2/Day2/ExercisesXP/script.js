@@ -1,179 +1,54 @@
-let FavFood = "khachapuri"
-let FavMeal = "dinner"
-console.log(`i eat ${FavFood} at every ${FavMeal}`);
 
+// exercise 1
+let x = 5;
+let y = 2;
 
-const myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
-let myWatchedSeriesLength = myWatchedSeries.length
-let myWatchedSeriesSentence = [myWatchedSeries[0], myWatchedSeries[1], myWatchedSeries[2]]
-console.log(`i watched ${myWatchedSeriesLength} series: ${myWatchedSeriesSentence[0]}, ${myWatchedSeriesSentence[1]} and ${myWatchedSeriesSentence[2]}`);
+if (x > y){
+    console.log("x is the biggest number");
+} else if (y > x){
+    console.log("y is the biggest number");
+} else {
+    console.log("x = y");
+}
 
-myWatchedSeries[2] = "friends"
-myWatchedSeries[3] = "breaking bad"
-myWatchedSeries.unshift("rick and morty")
-myWatchedSeries.splice(1,1)
-console.log(myWatchedSeries[1][2]);
-console.log(myWatchedSeries);
+// exercise 2: chihuahua
 
-// exercise 3
+let newDog = "Chihuahua"
+console.log(newDog.length);
+console.log(newDog.toLowerCase());
+console.log(newDog.toUpperCase());
 
-let Ctemp = 130
-let Ftemp = (Ctemp * 9/5) + 32
-console.log(`${Ctemp}°C is ${Ftemp}°F`);
+if (newDog == "Chihuahua") {
+    console.log('I love Chihuahuas, it’s my favorite dog breed');
+} else {
+    console.log('I dont care, I prefer cats');
+}
 
+// exrcise 3  even or odd
 
-console.log("/////////////////////////////////////////////////////////////////");
-// Exercise 4
+let num = prompt("number: ");
 
-// 1.
-let c;
-let a = 34;
-let b = 21;
+if (num % 2 == 0 ){
+    console.log('x is an even number');
+} else if (num % 2 == 1){
+    console.log('x is an odd number');
+} else {
+    console.log("i want number only!");
+}
 
-// 2.
-console.log(a+b) //first expression
-// Prediction: 55 because , a and b are variables that equal numbers
-// Actual: 55
+//exercise 4 : group chat
 
-// 3.
-a = 2;
+const users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000", 'user_1', 'user_2','user_3', 'user_4'];
 
-console.log(a+b) //second expression
-// Prediction: 23 because a changed value
-// Actual: 23
+if (users.length == 0) {
+    console.log('no one is online');
+} else if (users.length == 1) {
+    console.log(users[0]+ " is online");
+} else if (users.length == 2) {
+    console.log(users[0]+ " and " + users[1]+ " are online");
+}else {
+    console.log(
+        users[0], ", ", users[1], " and", users.slice(2).length, "more are online"
+    );
+}
 
-// 4.
-console.log(c);
-// Prediction: c doesnt have value so its NaN
-// Actual: undefined
-
-// 4.
-console.log(3+4+'5');
-// Prediction: 75 cus 5 is string
-// Actual: 75
-
-console.log("////////////////////////////////////");
-// Exercise 5
-
-typeof(15)
-// Prediction: number
-// Actual:number
-
-typeof(5.5)
-// Prediction: number
-// Actual:number
-
-typeof(NaN)
-// Prediction: undefined
-// Actual:number            wrong
-
-typeof("hello")
-// Prediction: string
-// Actual:string
-
-typeof(true)
-// Prediction: boolean
-// Actual:boolean
-
-typeof(1 != 2)
-// Prediction: boolean
-// Actual:boolean
-
-"hamburger" + "s"
-// Prediction: hamburgers
-// Actual:hamburgers
-
-"hamburgers" - "s"
-// Prediction: undefined / error
-// Actual: NaN                   wrong
-
-"1" + "3"
-// Prediction: 13
-// Actual: 13
-
-"1" - "3"
-// Prediction: undefined / error
-// Actual: -2                  very wrong
-
-"johnny" + 5
-// Prediction: johnny5 
-// Actual:johnny5 
-
-"johnny" - 5
-// Prediction: undefined / error
-// Actual: NaN                    wrong
-
-99 * "hello"
-// Prediction: hellohellohellohello 94 more times
-// Actual:NaN                       very wrong
-
-1 != 1
-// Prediction: false
-// Actual: false
-
-1 == "1"
-// Prediction: true
-// Actual: true
-
-1 === "1"
-// Prediction: false
-// Actual: false
-
-console.log("//////////////////////////////////////");
-// Exercise 6 
-
-5 + "34"
-// Prediction: 534
-// Actual:534
-
-5 - "4"
-// Prediction: NaN
-// Actual:1         wrong
-
-10 % 5
-// Prediction: 0
-// Actual:0
-
-5 % 10
-// Prediction: 0.5
-// Actual:5                 wrong
-
-"Java" + "Script"
-// Prediction:JavaScript
-// Actual:JavaScript
-
-" " + " "
-// Prediction:'  '
-// Actual:'  '
-
-" " + 0
-// Prediction:' 0'
-// Actual:' 0'
-
-true + true
-// Prediction:2
-// Actual:2
-
-true + false
-// Prediction:1
-// Actual:1
-
-false + true
-// Prediction:1
-// Actual:1
-
-false - true
-// Prediction:-1
-// Actual:-1
-
-!true
-// Prediction:false
-// Actual:false
-
-3 - 4
-// Prediction:-1
-// Actual:-1
-
-"Bob" - "bill"
-// Prediction:NaN
-// Actual:NaN
