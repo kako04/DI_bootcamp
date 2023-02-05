@@ -92,12 +92,12 @@ changeEnough(4.25, [25, 20, 5, 0])
 
 console.log('//////////////');
 //exercise 6
-function hotelCost(NON) {
-    for (let l = 0;  l++) {
-        if () {
+// function hotelCost(NON) {
+//     for (let l = 0; ; l++) {
+//         if (NON) {
         
-        }
+//         }
         
-    }
-}
+//     }
+// }
 hotelCost(prompt("how many nights??"))
