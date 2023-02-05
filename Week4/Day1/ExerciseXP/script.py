@@ -18,7 +18,7 @@ print("I have a",computer_brand ,"computer")
 name = "kako"
 age = "18"
 shoe_size = "42"
-info = "my name is "+ name +" i am "+ age + " and my shoe size is " + shoe_size
+info = "my name is {} i am {} and my shoe size is {}".format(name,age,shoe_size)
 print(info)
 # exercise 6 
 a = 91
@@ -34,7 +34,7 @@ else:
     print("my name is better than your name")
 # exercise 9
 user_height = input("how high are you in inches")
-if user_height*2.54 >= 145:
+if int(user_height)*2.54 >= 145:
     print("u are tall enough big boy")
 else:
     print("bye bye")
