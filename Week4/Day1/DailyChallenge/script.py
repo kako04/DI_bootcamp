@@ -1,7 +1,7 @@
 # 1
 u_str = input("string at least 10 charachters long: ")
 if len(u_str)< 10:
-    print('sting not long enough my guy')
+    print('string not long enough my guy')
 elif len(u_str)>10:
     print('too long oe')
 else:
