@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .tic-tac-toe {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tic-tac-toe">
+      <div class="square" id="square1"></div>
+      <div class="square" id="square2"></div>
+      <div class="square" id="square3"></div>
+      <div class="square" id="square4"></div>
+      <div class="square" id="square5"></div>
+      <div class="square" id="square6"></div>
+      <div class="square" id="square7"></div>
+      <div class="square" id="square8"></div>
+      <div class="square" id="square9"></div>
+    </div>
+
+    <script>
+        const squares = document.querySelectorAll(".square");
+let currentPlayer = "X";
+
+squares.forEach(square => {
+  square.addEventListener("click", handleClick);
+});
+
+function handleClick() {
+  if (this.innerHTML === "") {
+    this.innerHTML = currentPlayer;
+
+    if (checkForWin(currentPlayer)) {
+      alert(`${currentPlayer} wins!`);
+      squares.forEach(square => {
+        square.removeEventListener("click", handleClick);
+      });
+    } else if (checkForDraw()) {
+      alert("It's a draw!");
+      squares.forEach(square => {
+        square.removeEventListener("click", handleClick);
+      });
+    } else {
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+    }
+  }
+}
+
+function checkForWin(player) {
+  if (
+    (square1.innerHTML === player &&
+      square2.innerHTML === player &&
+      square3.innerHTML === player) ||
+    (square4.innerHTML === player &&
+      square5.innerHTML === player &&
+      square6.innerHTML === player) ||
+    (square7.innerHTML === player &&
+      square8.innerHTML === player &&
+      square9.innerHTML === player) ||
+    (square1.innerHTML === player &&
+      square4.innerHTML === player &&
+      square7.innerHTML === player) ||
+    (square2.innerHTML === player &&
+      square5.innerHTML === player &&
+      square8.innerHTML === player) ||
+    (square3.innerHTML === player &&
+      square6.innerHTML === player &&
+      square9.innerHTML === player) ||
+    (square1.innerHTML === player &&
+      square5.innerHTML === player &&
+      square9.innerHTML === player) ||
+    (square3.innerHTML === player &&
+      square5.innerHTML === player &&
+      square7.innerHTML === player)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function checkForDraw() {
+  for (let i = 0; i < squares.length; i++) {
+    if (squares[i].innerHTML === "") {
+      return false;
+    }
+  }
+  return true;
+}
+
+    </script>
+    
+
+    </body>
+</html>
