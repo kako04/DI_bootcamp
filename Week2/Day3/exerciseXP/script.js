@@ -13,3 +13,19 @@ console.log(sliced);
 console.log(people.indexOf('Foo'));//it returns -1 cus there is no Foo in the array
 
 var last = people.slice(-1);
+
+for (let i = 0; i < people.length; i++) {
+    const itemsinpeople = people[i];
+    console.log(itemsinpeople);
+}
+console.log('///////////////////');
+for (let i = 0; i < people.length; i++) {
+    const itemsinpeople = people[i];
+    console.log(itemsinpeople);
+    if (itemsinpeople == 'jason') {
+        break
+    }
+}
+
+//exe 2 
+
