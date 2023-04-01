@@ -40,3 +40,5 @@ from sklearn.model_selection import train_test_split
 X = df.drop(columns=["Survived"])
 y = df["Survived"]
 X_train, X_test, y_train
+
+
