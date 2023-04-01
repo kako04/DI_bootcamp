@@ -1,0 +1,61 @@
+import random
+
+M = random.randint(2, 49)
+N = random.randint(2, 39)
+
+# Create the 2D array filled with random integers
+table = []
+for i in range(M):
+    row = []
+    for j in range(N):
+        row.append(random.randint(1, 100))
+    table.append(row)
+
+# Print the third row
+print(table[2])
+
+# Print the third column
+for row in table:
+    print(row[2])
+
+# Set every element in the last row equal to 7
+for j in range(N):
+    table[-1][j] = 7
+
+# Set every element in the last column equal to the sum of the first two columns
+sum_of_columns = []
+for j in range(N):
+    column_sum = 0
+    for i in range(M-1):
+        column_sum += table[i][j]
+    sum_of_columns.append(column_sum)
+for i in range(M):
+    table[i][-1] = sum_of_columns[0] + sum_of_columns[1]
+
+print(table)
+
+
+import numpy as np
+
+M = np.random.randint(2, 49)
+N = np.random.randint(2, 39)
+
+# Create the 2D array filled with random integers
+table = np.random.randint(1, 100, size=(M, N))
+
+# Print the third row
+print(table[2])
+
+# Print the third column
+print(table[:,2])
+
+# Set every element in the last row equal to 7
+table[-1,:] = 7
+
+# Set every element in the last column equal to the sum of the first two columns
+sum_of_columns = table[:,:2].sum(axis=1)
+table[:,-1] = sum_of_columns
+
+print(table)
+
+
